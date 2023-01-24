@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Expenses from "./components/Expenses";
+import HelloWorld from "./components/HelloWorld";
 
 function App() {
+  const expenses = [
+    {
+      id: "i1",
+      title: "car insurance",
+      date: new Date(2023, 4, 12),
+      amount: 234.43,
+    },
+    {
+      id: "i2",
+      title: "health insurance",
+      date: new Date(2023, 2, 22),
+      amount: 544.43,
+    },
+    {
+      id: "i1",
+      title: "shopping",
+      date: new Date(2023, 0, 2),
+      amount: 1234.43,
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2>Start!</h2>
+      <Expenses item={expenses} />
+      <HelloWorld name="john" />
+      <HelloWorld name="harry" />
+      <HelloWorld name="max" />
     </div>
   );
 }
